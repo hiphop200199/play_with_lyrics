@@ -1,0 +1,39 @@
+#page #button-field {
+  position: absolute;
+  left: calc(50% - 169px);
+  top: 50%;
+  transition-duration: 1s;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#page #button-field button {
+  display: none;
+  width: 230px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  opacity: 0;
+  color: #000000 !important;/*預防蘋果瀏覽器預設顏色--藍色*/
+  transition-duration: 0.7s;
+  -webkit-text-decoration: 2px underline solid transparent;
+          text-decoration: 2px underline solid transparent;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+#page #button-field button:hover {
+  -webkit-text-decoration: 2px underline solid #000000;
+          text-decoration: 2px underline solid #000000;
+}
+#page #button-field #previous, #page #button-field #next {
+  text-decoration: none;
+  width: 50px;
+}
+#page #button-field #previous:hover {
+  transform: translateX(-5%);
+}
+#page #button-field #next:hover {
+  transform: translateX(5%);
+}

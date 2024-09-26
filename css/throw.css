@@ -1,0 +1,25 @@
+
+
+
+
+@keyframes throwPiece {
+ 
+  0%{
+      transform: translateZ(100px) translateY(0px) scale(1.6);
+     
+  } 
+  23%{
+      transform: translateZ(0px) translateY(-30vh) scale(1.3);
+     
+  }
+  57%{
+      transform: translateZ(-100px) translateY(-60vh) scale(1); 
+      
+      opacity: 0.5;
+  }  
+  to{
+    transform:translateZ(-200px) translateY(-60vh) scale(0.7); 
+    
+    opacity: 0;
+  }
+}

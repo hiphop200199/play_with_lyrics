@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+/*chrome,opera,safari,edge客製捲軸*/
+::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width:2vw;
+}
+::-webkit-scrollbar-track{
+    background:none;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#009999;
+    border-radius:12px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  --yellow:rgba(255, 242, 102,0.8);
+}
+#logo-image{
+  display: none;  
+}
+#page {
+  display:none; 
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  perspective: 200px;
+}
+#page #BGM-control {
+  display: none; 
+  position: absolute;
+  opacity: 0;
+  right: 2%;
+  top: 2%;
+  padding: 2px;
+  border: none;
+  background: none;
+  font-size: 36px;
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition-duration: 0.7s;
+  color: black;
+}
+
+
+#page #wave1, #page #wave2 {
+  display: none;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  animation: wave 12s ease-in-out infinite alternate;
+  z-index: -1;
+  transition: 1s;
+}
+
+#page #game-message {
+  position: absolute;
+  top: 8%;
+  width: 90%;
+  margin: 0 5%;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: clamp(22px,5vw,30px);
+  /*text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.4);*/
+  opacity: 0;
+  transition-duration: 1s;
+  text-align: center;
+}
+#page #singer-and-songname{
+  position: absolute;
+  top: 15%;
+  width: 90%;
+  margin: 0 5%;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: clamp(18px,4.5vw,26px);
+  /*text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.4);*/
+  opacity: 0;
+  transition-duration: 1s;
+  text-align: center;
+}
+
+#page #rag{
+  display: none;
+  width: clamp(30px,4vw,80px);
+  height: clamp(25px,3vh,60px);
+  opacity: 0;
+  position: absolute;
+  transition: 1s;
+  border-radius: 5px;
+  background-image: linear-gradient(30deg, #00e6e6, #009999);
+  box-shadow: 2px 1px 2px 1px #003333;
+  z-index: 1;
+}
+
+
+
+
+@keyframes wave {
+  0% {
+    transform: scale(5,1) scaleX(5) translateX(0%);
+    -moz-transform: scale(5,1) scaleX(5) translateX(0%);   
+    scale: 5 1;
+  }
+  50% {
+    transform: scale(5,1) scaleX(5) translateX(-10%);
+    -moz-transform: scale(5,1) scaleX(5) translateX(-10%);  
+    scale: 5 1;
+  }
+  100% {
+    transform: scale(5,1) scaleX(5) translateX(20%);
+    -moz-transform: scale(5,1) scaleX(5) translateX(20%);
+    scale: 5 1;
+  }
+}
+@keyframes isWrong {
+  0% {
+    box-shadow: 1px 1px 5px 2px rgba(255, 65, 65, 0.3), 3px 3px 5px 2px rgba(255, 65, 65, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(5%);
+  }
+  6% {
+    transform: translateX(-5%);
+  }
+  12% {
+    transform: translateX(5%);
+  }
+  18% {
+    transform: translateX(-5%);
+  }
+  24% {
+    transform: translateX(5%);
+  }
+  100% {
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1), 3px 3px 5px 2px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: none;
+  }
+}
+@keyframes isRight {
+  33% {
+    box-shadow: 1px 1px 5px 2px rgba(102, 255, 204, 0.8), 3px 3px 5px 2px rgba(102, 255, 204, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
+        transform: rotate(5deg);
+  }
+  67% {
+    
+    transform: rotate(-5deg);
+  }
+  100% {
+        transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width:700px) and (min-height:501px) {
+  #page #lyrics{
+      width: 90%;
+      left:calc(50% - 45%); 
+  }
+  #page #which-mode-lyrics{
+      left:0%;
+  }
+  #page #which-mode-lyrics #which-mode-correct{
+      width: 90%;    
+  }
+  #page #which-mode-lyrics #which-mode-wrong{
+      width: 90%;
+  }
+}
+@media screen and (min-width:701px) and (max-height:500px){
+  #page #lyrics{
+      width: 70%;
+      left:15%;
+      font-size: clamp(16px,4dvh,24px); 
+  }
+  #page #which-mode-lyrics{
+      left:0%;
+      top: 20%;
+  }
+  /*firefox客製捲軸，第一個顏色是thumb的，第二個顏色是track的*/
+  #page #which-mode-lyrics #which-mode-correct{
+      width: 50%;    
+      font-size: clamp(16px,4dvh,24px);
+      height:50dvh;
+      overflow-y: auto;
+      scrollbar-gutter:stable;
+      scrollbar-width:auto;
+      scrollbar-color:#009999 transparent;
+  }
+  #page #which-mode-lyrics #which-mode-wrong{
+      width: 50%;
+      font-size: clamp(16px,4dvh,24px);
+      height:50dvh;
+      overflow-y: auto;
+      scrollbar-gutter:stable;
+      scrollbar-width:auto;
+      scrollbar-color:#009999 transparent;
+  }  
+  #page #up,#page #down{
+    left:7%;
+  }
+  #page #up {
+  bottom: 18dvh;
+  }
+  #page #down,#page #a, #page #d{
+  bottom:3dvh;    
+  }
+  #page #left,#page #right,#page #check-position-correct{
+  bottom:7dvh;    
+  }
+  #page #left {
+  right: 11%;
+  }
+  #page #right {
+  right: 5%;
+  }
+  #page #check-position-correct {
+  left: calc(50% - 55.4px);
+  }
+  #page #answer {
+  font-size: clamp(16px,4dvh,24px);
+  }
+  #page .answers{
+  font-size: clamp(16px,4dvh,24px);
+  }
+  #page .wrong {
+  font-size: clamp(16px,4dvh,24px);
+  }
+  #page #game-message { 
+  top: 3%;
+  }
+  #page #egg-picture {
+  scale: 0.6;
+  top: 20dvh;
+  }
+  #page #egg-picture2 {
+  scale: 0.6;
+  top: 20dvh;
+  }
+  #page #egg-picture3 {
+  scale: 0.6;
+  top: 20dvh;
+  }
+  #page .onion-leaves{
+  scale: 0.3;
+  top: -45dvh;
+  }
+}

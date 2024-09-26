@@ -1,0 +1,26 @@
+#page .onion-leaves {
+  display: none;
+  opacity: 0;
+  transition: 1s;
+  scale: 0.55;
+  position: absolute;
+  left:calc(50% - 253.008px);
+  top: calc(65% - 284.023px);
+  transform-origin: 50% 100%;
+}
+
+#page #onion-leaf-1st {
+  z-index: 7;
+}
+#page #onion-leaf-2nd {
+  z-index: 6;
+}
+#page #onion-leaf-3rd {
+  z-index: 5;
+}
+#page #onion-leaf-4th {
+  z-index: 4;
+}
+#page #onion-leaf-5th {
+  z-index: 3;
+}

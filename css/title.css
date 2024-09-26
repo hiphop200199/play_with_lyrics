@@ -1,0 +1,70 @@
+#page #titles {
+  position: absolute;
+  left: calc(50% - 170px);
+  top: 10%;
+  transition-duration: 1s;
+  width: 340px;
+  text-align: center;
+}
+#page #titles .letter {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 40px;
+  /*text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.4);*/
+  opacity: 0;
+  transition-duration: 1s;
+}
+.letter:nth-of-type(1) {
+  transition-delay: 0.1s;
+}
+
+.letter:nth-of-type(2) {
+  transition-delay: 0.15s;
+}
+
+.letter:nth-of-type(3) {
+  transition-delay: 0.2s;
+}
+
+.letter:nth-of-type(4) {
+  transition-delay: 0.25s;
+}
+
+.letter:nth-of-type(5) {
+  transition-delay: 0.3s;
+}
+
+.letter:nth-of-type(6) {
+  transition-delay: 0.35s;
+}
+
+.letter:nth-of-type(7) {
+  transition-delay: 0.4s;
+}
+
+.letter:nth-of-type(8) {
+  transition-delay: 0.45s;
+}
+
+.letter:nth-of-type(9) {
+  transition-delay: 0.5s;
+}
+
+.letter:nth-of-type(10) {
+  transition-delay: 0.55s;
+}
+
+.letter:nth-of-type(11) {
+  transition-delay: 0.6s;
+}
+
+.letter:nth-of-type(12) {
+  transition-delay: 0.65s;
+}
+
+.letter:nth-of-type(13) {
+  transition-delay: 0.7s;
+}
+
+.letter:nth-of-type(14) {
+  transition-delay: 0.75s;
+}

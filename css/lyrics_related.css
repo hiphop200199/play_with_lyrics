@@ -1,0 +1,112 @@
+#page #which-mode-lyrics{
+  display: none;
+  justify-content: center;
+  position: absolute;
+  left: calc(50% - 600px);
+  top: 30%; 
+}
+#page #which-mode-lyrics #which-mode-correct{
+  display: none;
+  opacity: 0;
+  width: 600px;
+  height: fit-content;  
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1), 3px 3px 5px 2px rgba(0, 0, 0, 0.05);
+  font-size: clamp(16px,4vw,24px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: transparent;
+  margin: 5%;
+  transition: 1s;
+}
+#page #which-mode-lyrics #which-mode-wrong{
+  display: none;
+  opacity: 0;
+  width: 600px;
+  height: fit-content;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1), 3px 3px 5px 2px rgba(0, 0, 0, 0.05);
+  font-size: clamp(16px,4vw,24px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: transparent;
+  margin: 5%;
+  transition: 1s;
+}
+#page #lyrics {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: calc(50% - 300px);
+  top: 30%;
+  transform: translatey(10%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 600px;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1), 3px 3px 5px 2px rgba(0, 0, 0, 0.05);
+  transition: 1s;
+  font-size: clamp(16px,4vw,24px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+#page #answer {
+  position: absolute;
+  padding: 2px 5px;
+  font-size: clamp(16px,4vw,24px);
+  border-radius: 5px;
+  color: white;
+  background-image: linear-gradient(30deg, #00e6e6, #009999);
+  box-shadow: 2px 1px 2px 1px #003333;
+  transition: 1s;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  white-space: nowrap;
+}
+#page .answers{
+  position: absolute;
+  padding: 2px 5px;
+  font-size: clamp(16px,4vw,24px);
+  border-radius: 5px; 
+  box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  transition: 1s;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  white-space: nowrap;  
+}
+
+#page .wrong {
+  position: absolute;
+  padding: 2px 5px;
+  font-size: clamp(16px,4vw,24px);
+  border-radius: 5px;
+  color: white;
+  background-image: linear-gradient(30deg, #00e6e6, #009999);
+  box-shadow: 2px 1px 2px 1px #003333;
+  transition: 1s;
+  opacity: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#page #blank {
+  color: transparent;
+  font-size: 36px;
+  transition: 1s;
+}
+#page .blanks{
+  color: transparent;
+  font-size: 36px;
+  transition: 1s;  
+}
+#page input#blank{
+    padding: 2px;
+    width: 40%;
+}
