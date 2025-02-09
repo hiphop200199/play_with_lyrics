@@ -1,10 +1,10 @@
 <?php
 
 
-$servername = "sql105.infinityfree.com";
-$username = "if0_35569080";
-$password = "dDNZa1Unvm8";
-$databasename = 'if0_35569080_songs';
+$servername = "";
+$username = "";
+$password = "";
+$databasename = '';
 
 try {
   $conn = new PDO('mysql:host='.$servername.';charset=utf8mb4;dbname='.$databasename, $username, $password);
